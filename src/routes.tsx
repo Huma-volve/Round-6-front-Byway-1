@@ -7,6 +7,7 @@ import {
   NotFound,
   Notifications,
   ProtectedRoute,
+  Settings,
 } from "./pages";
 
 export const router = createBrowserRouter([
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
       {
         path: "/close-account",
         element: <CloseAccount />,
+      },
+      {
+        path: "/settings",
+        element: <Settings />,
       },
     ],
   },

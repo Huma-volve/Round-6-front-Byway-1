@@ -4,3 +4,4 @@ export { default as NotFound } from "./NotFound";
 export { default as Error } from "./Error";
 export { default as Notifications } from "./notifications/Notifications";
 export { default as CloseAccount } from "./close-account/CloseAccount";
+export { default as Settings } from "./settings/Settings";
