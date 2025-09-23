@@ -27,7 +27,6 @@
     "date-fns": "^4.1.0",
     "formik": "^2.4.6",
     "input-otp": "^1.4.2",
-    "leaflet": "^1.9.4",
     "lucide": "^0.544.0",
     "lucide-react": "^0.544.0",
     "react": "^19.0.0-rc.1",
@@ -36,9 +35,7 @@
     "react-dom": "^19.0.0-rc.1",
     "react-hot-toast": "^2.6.0",
     "react-leaflet": "^5.0.0-rc.2",
-    "react-multi-carousel": "^2.8.6",
     "react-router-dom": "^7.9.1",
-    "slick-carousel": "^1.8.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.13",
     "yup": "^1.7.0"
