@@ -7,3 +7,4 @@ export { default as CloseAccount } from "./close-account/CloseAccount";
 export { default as Settings } from "./settings/Settings";
 export { default as PaymentMethods } from "./payment-methods/PatmentMethods";
 export { default as Payment } from "./payment/Payment";
+export { default as PaymentHistory } from "./payment/PaymentHistory";

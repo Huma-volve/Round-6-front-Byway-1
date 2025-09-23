@@ -10,6 +10,7 @@ import {
   Settings,
   PaymentMethods,
   Payment,
+  PaymentHistory,
 } from "./pages";
 
 export const router = createBrowserRouter([
@@ -40,12 +41,16 @@ export const router = createBrowserRouter([
         element: <Settings />,
       },
       {
+        path: "payment",
+        element: <Payment />,
+      },
+      {
         path: "payment-methods",
         element: <PaymentMethods />,
       },
       {
-        path: "payment",
-        element: <Payment />,
+        path: "payment-history",
+        element: <PaymentHistory />,
       },
     ],
   },
