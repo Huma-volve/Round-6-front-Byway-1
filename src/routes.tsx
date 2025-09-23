@@ -1,6 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import { Error, Home, NotFound, ProtectedRoute } from "./pages";
+import {
+  CloseAccount,
+  Error,
+  Home,
+  NotFound,
+  Notifications,
+  ProtectedRoute,
+} from "./pages";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -16,6 +23,14 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/notifications",
+        element: <Notifications />,
+      },
+      {
+        path: "/close-account",
+        element: <CloseAccount />,
       },
     ],
   },
