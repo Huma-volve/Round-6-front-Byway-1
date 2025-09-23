@@ -9,6 +9,7 @@ import {
   ProtectedRoute,
   Settings,
   PaymentMethods,
+  Payment,
 } from "./pages";
 
 export const router = createBrowserRouter([
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: "payment-methods",
         element: <PaymentMethods />,
+      },
+      {
+        path: "payment",
+        element: <Payment />,
       },
     ],
   },
