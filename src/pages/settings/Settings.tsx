@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const links = [
   { href: "/", label: "Browse Course" },
-  { href: "/Settings", label: "settings" },
+  { href: "/settings", label: "settings" },
 ];
 
 export default function Settings() {

@@ -8,6 +8,7 @@ import {
   Notifications,
   ProtectedRoute,
   Settings,
+  PaymentMethods,
 } from "./pages";
 
 export const router = createBrowserRouter([
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: "/settings",
         element: <Settings />,
+      },
+      {
+        path: "payment-methods",
+        element: <PaymentMethods />,
       },
     ],
   },
