@@ -41,15 +41,15 @@ export const router = createBrowserRouter([
         element: <Settings />,
       },
       {
-        path: "payment",
+        path: "/payment",
         element: <Payment />,
       },
       {
-        path: "payment-methods",
+        path: "/payment-methods",
         element: <PaymentMethods />,
       },
       {
-        path: "payment-history",
+        path: "/payment-history",
         element: <PaymentHistory />,
       },
     ],
