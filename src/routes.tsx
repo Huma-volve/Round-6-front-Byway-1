@@ -16,7 +16,14 @@ import {
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
   {
-    path: "/",
+    path: "/sign-up",
+    element: <Home />,
+  },
+  {
+    path: "/log-in",
+    element: <Home />,
+  },
+  {
     element: (
       <ProtectedRoute>
         <Layout />
