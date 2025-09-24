@@ -1,8 +1,8 @@
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import type { IProfileLink } from "@/types";
+import type { ILink } from "@/types";
 import { Link } from "react-router-dom";
 
-const profileLinks: IProfileLink[] = [
+const profileLinks: ILink[] = [
     {
         id: "profile",
         label: "Profile",
@@ -38,7 +38,7 @@ const profileLinks: IProfileLink[] = [
 function UserMenu() {
     return (
         <>
-            {profileLinks.map((link: IProfileLink) => (
+            {profileLinks.map((link: ILink) => (
                 <DropdownMenuItem key={link.id}>
                     <Link
                         to={link.path}

@@ -15,7 +15,7 @@ export default function Navbar() {
     const { pathname } = useLocation();
 
     return (
-        <header className="container-xl flex items-center gap-2 sm:gap-4 mx-auto p-4">
+        <header className="container-xl flex items-center gap-2 sm:gap-4 mx-auto p-4 text-gray-700">
             <Logo />
             <SearchBar />
 
