@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import { Error, Home, NotFound, ProtectedRoute } from "./pages";
+import ShoppingCart from "./pages/shopping-cart/ShoppingCart";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/cart",
+        element: <ShoppingCart />,
       },
     ],
   },
