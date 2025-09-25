@@ -16,3 +16,51 @@ export interface ISocial {
     title: string;
     link: string;
 }
+
+export interface ICourseResponse {
+    current_page: number;
+    data: ICourse[];
+    first_page_url: string;
+    from: number;
+    last_page: number;
+    last_page_url: string;
+    links: {
+        url: null | string;
+        label: string;
+        active: boolean;
+    }[];
+    next_page_url: null;
+    path: string;
+    per_page: number;
+    prev_page_url: null;
+    to: number;
+    total: number;
+}
+
+export interface ICourse {
+    id: number;
+    instructor_id: number;
+    category_id: number;
+    title: string;
+    description: string;
+    price: string;
+    compare_price: string;
+    image: string;
+    cover_public_id: null;
+    lessons_count: number;
+    level: string;
+    duration_hours: number;
+    total_minutes: number;
+    video_provider: string;
+    status: string;
+    created_at: Date;
+    updated_at: Date;
+}
+
+export interface ICourseSearchQueries {
+    q?: string;
+    category?: string;
+    level?: string;
+    status?: string;
+    price_max?: number;
+}

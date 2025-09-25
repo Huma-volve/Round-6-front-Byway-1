@@ -1,9 +1,13 @@
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import { Search } from "lucide-react";
 
 function SearchBar() {
+    const navigate = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
+
     const formik = useFormik({
         // INITIAL VALUES
         initialValues: {
@@ -16,15 +20,19 @@ function SearchBar() {
         }),
 
         // SUBMIT APPOINTMENT FORM
-        onSubmit: (values) => {
-            console.log(values);
+        onSubmit: (values, { resetForm }) => {
+            const newParams = new URLSearchParams(searchParams);
+            newParams.set("q", values.search);
+            navigate(`/courses`);
+            setSearchParams(newParams);
+            resetForm();
         },
     });
 
     return (
         <form
             onSubmit={formik.handleSubmit}
-            className="relative flex-1 flex flex-col gap-4 border-1 border-gray-700 rounded-md  text-gray-700 text-sm max-w-lg mr-auto"
+            className="relative flex-1 flex flex-col gap-4 border-1 border-gray-700 rounded-sm  text-gray-700 text-sm max-w-lg mr-auto"
             id="appointmentForm"
         >
             <div className="flex items-center gap-1">

@@ -63,7 +63,7 @@ function ContactUs() {
             </li>
             <ul className="flex gap-4 mt-4">
                 {contacts.socials.map((social: ISocial) => (
-                    <li>
+                    <li key={social.title}>
                         <a
                             href={social.link}
                             target="_blank"
