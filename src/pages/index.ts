@@ -8,3 +8,6 @@ export { default as Settings } from "./settings/Settings";
 export { default as PaymentMethods } from "./payment/PatmentMethods";
 export { default as Payment } from "./payment/Payment";
 export { default as PaymentHistory } from "./payment/PaymentHistory";
+export { default as Courses } from "./courses/Courses";
+export { default as CourseDetails } from "./courseDetails/CourseDetails";
+export { default as InstructorDetails } from "./instructorDetails/InstructorDetails";

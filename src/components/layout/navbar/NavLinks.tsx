@@ -8,7 +8,7 @@ import {
     DropdownMenuContent,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "../../common/UserAvatar";
 
 type NavLinksProps = {
     isLoggedIn: boolean;
@@ -51,7 +51,10 @@ function NavLinks({ isLoggedIn, cart }: NavLinksProps) {
 
                     <DropdownMenu>
                         <DropdownMenuTrigger className="cursor-pointer">
-                            <UserAvatar />
+                            <UserAvatar
+                                src="https://github.com/shadcn.png"
+                                userName="Tom Cook"
+                            />
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="-translate-x-8">
                             <UserMenu />

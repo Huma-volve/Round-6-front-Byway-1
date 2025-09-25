@@ -15,7 +15,7 @@ export default function Navbar() {
     const { pathname } = useLocation();
 
     return (
-        <header className="container-xl flex items-center gap-2 sm:gap-4 mx-auto p-4 text-gray-700">
+        <header className="w-full max-w-[1240px] flex items-center gap-2 sm:gap-4 mx-auto p-4 text-gray-700">
             <Logo />
             <SearchBar />
 
