@@ -6,6 +6,7 @@ import SignUp from "./pages/auth/components/sign-up";
 import VerifyEmail from "./pages/auth/components/verifyEmail";
 import ForgetPassword from "./pages/auth/components/forgetPassword";
 import CreateNewPassword from "./pages/auth/components/createNewPassword";
+import Profile from "./pages/profile/Profile";
 import {
   CloseAccount,
   Error,
@@ -93,6 +94,10 @@ export const router = createBrowserRouter([
       {
         path: "/instructors/:instructorId",
         element: <InstructorDetails />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       },
     ],
   },
