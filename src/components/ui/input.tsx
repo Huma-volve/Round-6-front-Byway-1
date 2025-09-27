@@ -2,7 +2,11 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Eye, EyeOff } from "lucide-react";
 
-function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+interface InputProps extends React.ComponentProps<"input"> {
+  type?: string;
+}
+
+function Input({ className, type = "text", ...props }: InputProps) {
   const [showPassword, setShowPassword] = React.useState(false);
   const isPassword = type === "password";
 
@@ -25,10 +29,10 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
         <button
           type="button"
           onClick={() => setShowPassword(!showPassword)}
-          className="absolute right-3 top-1/2 cursor-pointer text-primary -translate-y-1/2"
+          className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-primary"
         >
           {showPassword ? (
-            <Eye className="h-4 w-4 " />
+            <Eye className="h-4 w-4" />
           ) : (
             <EyeOff className="h-4 w-4" />
           )}
