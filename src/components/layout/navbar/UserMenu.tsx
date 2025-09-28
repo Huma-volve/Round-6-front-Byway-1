@@ -26,7 +26,7 @@ const profileLinks: ILink[] = [
     {
         id: "setting",
         label: "Setting",
-        path: "/setting",
+        path: "/settings",
     },
     {
         id: "sign-out",
