@@ -12,6 +12,11 @@ import {
   Payment,
   PaymentHistory,
 } from "./pages";
+import AddCourse from "./pages/Instractor/addCourse/AddCourse";
+import CourseDetails from "./pages/Instractor/CourseDetails/CourseDetails";
+import Reviews from "./pages/Instractor/MyReviews/Reviews";
+import InstructorNotifications from "./pages/Instractor/Notifications/InstructorNotifications";
+import Revenue from "./pages/Instractor/Revenue/Revenue";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -22,6 +27,26 @@ export const router = createBrowserRouter([
   {
     path: "/log-in",
     element: <Home />,
+  },
+  {
+    path: "/addcourse",
+    element: <AddCourse />,
+  },
+  {
+    path: "/coursedetails",
+    element: <CourseDetails />,
+  },
+  {
+    path: "/reviews",
+    element: <Reviews />,
+  },
+  {
+    path: "/instructor/notifications",
+    element: <InstructorNotifications />,
+  },
+  {
+    path: "/revenue",
+    element: <Revenue />,
   },
   {
     element: (
