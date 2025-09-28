@@ -2,8 +2,13 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Video } from "lucide-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 export default function AddCourse() {
   const [preview, setPreview] = useState<string | null>(null);
@@ -29,10 +34,7 @@ export default function AddCourse() {
   return (
     <>
       {deleteflag && (
-        <div
-          // onClick={() => setDeleteFlag(false)}
-          className="w-screen h-screen fixed top-0 left-0 bg-black/50 z-10 flex justify-center items-center "
-        >
+        <div className="w-screen h-screen fixed top-0 left-0 bg-black/50 z-10 flex justify-center items-center ">
           <div className="w-full max-w-[1000px] h-auto z-50 bg-white rounded-[25px] flex flex-col p-6 sm:p-8 md:p-10">
             <p className="font-[600] text-[22px] sm:text-[28px] md:text-[32px] lg:text-[40px] text-[#0F172A] mb-12 text-center">
               Are you sure you want to delete this video?
@@ -54,45 +56,30 @@ export default function AddCourse() {
       )}
 
       <div className="w-full flex flex-col gap-[30px] lg:gap-[0px]">
-        <div className="flex justify-center items-center w-full relative">
-          <div className="flex items-center justify-center gap-[4px] sm:gap-[6px] md:gap-[8px] absolute left-0 top-[100%] lg:top-[50%] lg:translate-y-[-50%] flex-wrap">
-            <NavLink
-              to="/addlink"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[10px] sm:text-[12px] md:text-[14px] font-[400] text-[#2563EB]"
-                  : "text-[10px] sm:text-[12px] md:text-[14px] font-[400]"
-              }
-            >
-              My Course
-            </NavLink>
-            <ChevronRight className="size-[16px] sm:size-[18px] md:size-[20px]" />
-            <NavLink
-              to="/addlink"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[10px] sm:text-[12px] md:text-[14px] font-[400] text-[#2563EB]"
-                  : "text-[10px] sm:text-[12px] md:text-[14px] font-[400]"
-              }
-            >
-              Course Details
-            </NavLink>
-            <ChevronRight className="size-[16px] sm:size-[18px] md:size-[20px]" />
-            <NavLink
-              to="/addcourse"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[10px] sm:text-[12px] md:text-[14px] font-[400] text-[#2563EB]"
-                  : "text-[10px] sm:text-[12px] md:text-[14px] font-[400]"
-              }
-            >
-              Add Course
-            </NavLink>
-          </div>
-
-          <p className="font-[600] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px]">
+        <div className="relative w-full">
+          <p className="font-[600] text-[24px] md:text-[32px] lg:text-[40px] text-center w-full">
             Add course
           </p>
+
+          <div className="mt-2 lg:mt-0 lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2">
+            <Breadcrumb>
+              <BreadcrumbList className="flex flex-wrap gap-1 sm:gap-2 justify-start">
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Profile</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">My Course</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/addcourse" className="text-[#2563EB]">
+                    Course Details
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
         </div>
 
         <Formik
@@ -158,7 +145,7 @@ export default function AddCourse() {
                 <div className="w-full max-w-[320px] sm:max-w-[400px]  bg-white rounded-[8px] py-[20px] sm:py-[25px] md:py-[30px] px-[15px] sm:px-[18px] md:px-[20px] h-auto md:h-[220px] border flex flex-col gap-4 md:gap-0 md:justify-between">
                   <label
                     htmlFor="r1"
-                    className="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-[#727272] flex justify-between items-center"
+                    className="cursor-pointer font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-[#727272] flex justify-between items-center"
                   >
                     Beginner
                     <Field
@@ -176,7 +163,7 @@ export default function AddCourse() {
 
                   <label
                     htmlFor="r2"
-                    className="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-[#727272] flex justify-between items-center"
+                    className="cursor-pointer font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-[#727272] flex justify-between items-center"
                   >
                     Intermediate
                     <Field
@@ -194,7 +181,7 @@ export default function AddCourse() {
 
                   <label
                     htmlFor="r3"
-                    className="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-[#727272] flex justify-between items-center"
+                    className="cursor-pointer font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-[#727272] flex justify-between items-center"
                   >
                     Advanced
                     <Field
