@@ -2,15 +2,15 @@ import type { ReactNode } from "react";
 import { Navigate } from "react-router";
 
 type ProtectedRouteProps = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 function ProtectedRoute({ children }: ProtectedRouteProps) {
-    //! CHECK IF ROLE IS ADMIN
+  //! CHECK IF ROLE IS ADMIN
 
-    const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
 
-    return !token ? <Navigate to="/get-start" replace /> : children;
+  return children;
 }
 
 export default ProtectedRoute;
