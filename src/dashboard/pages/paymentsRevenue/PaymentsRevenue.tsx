@@ -1,5 +1,5 @@
 import OutletLayout from "@/dashboard/components/OutletLayout";
-import DataTable from "../../../components/common/DataTable";
+import DataTable from "../../components/DataTable";
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 
