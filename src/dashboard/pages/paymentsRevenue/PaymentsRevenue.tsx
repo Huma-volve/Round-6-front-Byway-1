@@ -2,6 +2,7 @@ import OutletLayout from "@/dashboard/components/OutletLayout";
 import DataTable from "../../components/DataTable";
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
+import StateCard from "@/dashboard/components/StateCard";
 
 interface IPaymentsRow {
     id: number;
@@ -57,6 +58,12 @@ function PaymentsRevenue() {
             title="Payments & Revenue"
             subTitle="Track all platform earnings, instructor payouts, and student payments."
         >
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8">
+                <StateCard value="$24,340" title="Platform Earnings" />
+                <StateCard value="$18,560" title="Instructor Earnings" />
+                <StateCard value="6" title="Total Withdrawal" />
+                <StateCard value="$5,780" title="Student Payments" />
+            </div>
             <DataTable<IPaymentsRow> data={payments}>
                 <CustomAction />
             </DataTable>
