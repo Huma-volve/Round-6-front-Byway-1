@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { useNavigate } from "react-router-dom";
+import cover from "@/assets/images/graphic design cover.png";
 
 export default function ShoppingCart() {
   const [cart, setCart] = useState<TopLevel[] | null>(null);
@@ -54,7 +55,7 @@ export default function ShoppingCart() {
         description: "Learn graphic design fundamentals",
         price: "400",
         compare_price: "410",
-        image: "/course-thumbnail.jpg",
+        image: cover,
         cover_public_id: "",
         lessons_count: 155,
         level: "All levels",
