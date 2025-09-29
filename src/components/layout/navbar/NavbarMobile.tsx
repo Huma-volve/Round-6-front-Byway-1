@@ -39,7 +39,7 @@ function NavbarMobile({ isLoggedIn }: NavbarMobileProps) {
                 {isLoggedIn && (
                     <DropdownMenuItem>
                         <Heart />
-                        <Link to="/likes">Whishlist</Link>
+                        <Link to="/favourites">Whishlist</Link>
                     </DropdownMenuItem>
                 )}
                 <DropdownMenuItem>

@@ -25,7 +25,12 @@ function NavLinks({ isLoggedIn, cart }: NavLinksProps) {
             </AppButton>
 
             {isLoggedIn && (
-                <AppButton as={Link} to="/likes" variant="ghost" Icon={Heart} />
+                <AppButton
+                    as={Link}
+                    to="/favourites"
+                    variant="ghost"
+                    Icon={Heart}
+                />
             )}
 
             <div className="relative hover:scale-105 transition mx-2">
