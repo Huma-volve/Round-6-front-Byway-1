@@ -2,6 +2,7 @@ import OutletLayout from "@/dashboard/components/OutletLayout";
 import DataTable from "../../components/DataTable";
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
+import PaymentStateCard from "./components/PaymentStateCard";
 
 interface IPaymentsRow {
     id: number;
@@ -39,7 +40,7 @@ function CustomAction({ rowId }: { rowId?: number }) {
     return (
         <>
             <DropdownMenuItem>
-                <Link to={`payment-details/${rowId}`}>View Details</Link>
+                <Link to={`/payment-details/${rowId}`}>View Details</Link>
             </DropdownMenuItem>
             <DropdownMenuItem className="text-primary-main focus:text-primary-main">
                 Approve Withdrawal
@@ -57,6 +58,12 @@ function PaymentsRevenue() {
             title="Payments & Revenue"
             subTitle="Track all platform earnings, instructor payouts, and student payments."
         >
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8">
+                <PaymentStateCard value="$24,340" title="Platform Earnings" />
+                <PaymentStateCard value="$18,560" title="Instructor Earnings" />
+                <PaymentStateCard value="6" title="Total Withdrawal " />
+                <PaymentStateCard value="$5,780" title="Student Payments" />
+            </div>
             <DataTable<IPaymentsRow> data={payments}>
                 <CustomAction />
             </DataTable>

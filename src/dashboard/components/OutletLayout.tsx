@@ -14,7 +14,7 @@ function OutletLayout({
     children,
 }: OutletLayoutProps) {
     return (
-        <div className="bg-gray-50 p-8 text-gray-900">
+        <div className="bg-gray-50 p-8 text-gray-900 min-h-screen">
             <header className="mb-4">
                 <h1 className={`${titleColor} font-medium text-xl mb-2`}>
                     {title}
