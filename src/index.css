@@ -18,7 +18,6 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
 
-<<<<<<< HEAD
   /* COLOR THEME */
   --color-gray-background: var(--gray-background);
   --color-gray-100: var(--gray-100);
@@ -39,29 +38,6 @@
   --color-warning-500: var(--warning-500);
   --color-error-800: var(--error-800);
   /* COLOR THEME */
-=======
-    /* COLOR THEME */
-    --color-gray-background: var(--gray-background);
-    --color-gray-100: var(--gray-100);
-    --color-gray-300: var(--gray-300);
-    --color-gray-400: var(--gray-400);
-    --color-gray-700: var(--gray-700);
-    --color-gray-800: var(--gray-800);
-    --color-gray-900: var(--gray-900);
-    --color-gray-950: var(--gray-950);
-    --color-gray-disable: var(--gray-disable);
-    --color-gray-border: var(--gray-border);
-    --color-major-shade: var(--major-shade);
-    --color-primary-main: var(--primary-main);
-    --color-primary-100: var(--primary-100);
-    --color-primary-500: var(--primary-500);
-    --color-primary-600: var(--primary-600);
-    --color-blue: var(--blue);
-    --color-secondary-main: var(--secondary-main);
-    --color-warning-500: var(--warning-500);
-    --color-error-800: var(--error-800);
-    /* COLOR THEME */
->>>>>>> 06e5ecbcc4f3a067ab978da75920d1e1451e6ca9
 
   --secondary: #f5f5f5;
   --color-primary-foreground: var(--primary-foreground);
