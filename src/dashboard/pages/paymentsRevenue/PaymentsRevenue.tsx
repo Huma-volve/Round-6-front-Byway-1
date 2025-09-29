@@ -40,7 +40,7 @@ function CustomAction({ rowId }: { rowId?: number }) {
     return (
         <>
             <DropdownMenuItem>
-                <Link to={`payment-details/${rowId}`}>View Details</Link>
+                <Link to={`/payment-details/${rowId}`}>View Details</Link>
             </DropdownMenuItem>
             <DropdownMenuItem className="text-primary-main focus:text-primary-main">
                 Approve Withdrawal
