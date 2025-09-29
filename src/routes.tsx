@@ -13,6 +13,7 @@ import {
   DashboardError,
   ProtectedAdminRoute,
 } from "./dashboard/pages";
+import UserProfile from "./dashboard/pages/userManagement/UserProfile";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
       {
         path: "/reports",
         element: <Reports />,
+      },
+      {
+        path: "/user-profile/:id",
+        element: <UserProfile />,
       },
     ],
   },
