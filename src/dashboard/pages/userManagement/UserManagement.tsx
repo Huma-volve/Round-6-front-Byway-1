@@ -46,7 +46,7 @@ function CustomAction({ rowId }: { rowId?: number }) {
   return (
     <>
       <DropdownMenuItem>
-        <Link to={`/user-profile/${rowId}`}>View Profile</Link>
+        <Link to={`user-profile/${rowId}`}>View Profile</Link>
       </DropdownMenuItem>
       <DropdownMenuItem className="text-error-800 focus:text-error-800">
         Block / Unblock
@@ -73,7 +73,7 @@ function UserManagement() {
       subTitle="Manage all registered users including learners and instructors."
     >
       {/* Search Bar */}
-      <div className="mb-4 relative w-full sm:max-w-md">
+      <div className="mb-4 relative max-w-md">
         <Search
           className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
           size={18}
@@ -83,16 +83,14 @@ function UserManagement() {
           placeholder="Search by name or email..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="pl-10 border-gray-400 w-full"
+          className="pl-10 border-gray-400"
         />
       </div>
 
-      {/* Table with responsive wrapper */}
-      <div className="overflow-x-auto rounded-lg border border-gray-200">
-        <DataTable<IUserRow> data={filteredUsers}>
-          <CustomAction />
-        </DataTable>
-      </div>
+      {/* Table */}
+      <DataTable<IUserRow> data={filteredUsers}>
+        <CustomAction />
+      </DataTable>
     </OutletLayout>
   );
 }
