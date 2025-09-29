@@ -9,11 +9,14 @@ import {
     PaymentsRevenue,
     PlatformSettings,
     Reviews,
+    FullReview,
     Reports,
     DashboardError,
     ProtectedAdminRoute,
-} from "./dashboard/pages";
 
+
+} from "./dashboard/pages";
+// import FullReview from "./dashboard/pages/FullReview/FullReview"
 export const router = createBrowserRouter([
     { path: "*", element: <NotFound /> },
     {
@@ -63,6 +66,11 @@ export const router = createBrowserRouter([
                 path: "/reviews",
                 element: <Reviews />,
             },
+            {
+                path: "/full-review",
+                element: <FullReview />,
+            },
+            // <Route path="/reviews/:id" element={<FullReview />} />
             {
                 path: "/reports",
                 element: <Reports />,
