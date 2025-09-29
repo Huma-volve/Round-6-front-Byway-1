@@ -25,7 +25,7 @@ function CourseManagement() {
     {
       id: 2,
       "Course Title": "JavaScript Fundamentals",
-      Instructor: "Omar Saeed",
+      Instructor: "Ahmed Saeed",
       Category: "Programming",
       Status: "Draft",
       "Created Date": "15 Aug 2024",
