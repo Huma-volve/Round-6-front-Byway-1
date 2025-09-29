@@ -32,7 +32,11 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    element: <DashboardLayout />,
+    element: (
+      <ProtectedAdminRoute>
+        <DashboardLayout />
+      </ProtectedAdminRoute>
+    ),
     errorElement: <DashboardError />,
     children: [
       {
