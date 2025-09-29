@@ -41,11 +41,13 @@ function DataTable<T extends { id: number }>({
         <Table className="text-center font-medium">
             <TableHeader className="[&_tr]:border-b-0">
                 <TableRow>
-                    {tableHeaderItems.map((head) => (
-                        <TableHeadItem key={String(head)}>
-                            {String(head)}
-                        </TableHeadItem>
-                    ))}
+                    {tableHeaderItems
+                        .filter((head) => head !== "id")
+                        .map((head) => (
+                            <TableHeadItem key={String(head)}>
+                                {String(head)}
+                            </TableHeadItem>
+                        ))}
                     {children && <TableHeadItem>Actions</TableHeadItem>}
                 </TableRow>
             </TableHeader>
@@ -53,23 +55,27 @@ function DataTable<T extends { id: number }>({
             <TableBody>
                 {data.map((row: T) => (
                     <TableRow key={row.id} className="border-0">
-                        {Object.values(row).map((cell, i) => (
-                            <TableCell
-                                key={`${i}-${cell}`}
-                                className={`${getWordColor(String(cell))}`}
-                            >
-                                {String(cell).includes("@") ? (
-                                    <a
-                                        href={`mailto:${cell}`}
-                                        className="text-primary-500"
-                                    >
-                                        {cell}
-                                    </a>
-                                ) : (
-                                    cell
-                                )}
-                            </TableCell>
-                        ))}
+                        {Object.entries(row)
+                            .filter((row) => row[0] !== "id")
+                            .map((cell, i) => (
+                                <TableCell
+                                    key={`${i}-${cell[1]}`}
+                                    className={`${getWordColor(
+                                        String(cell[1])
+                                    )}`}
+                                >
+                                    {String(cell[1]).includes("@") ? (
+                                        <a
+                                            href={`mailto:${cell[1]}`}
+                                            className="text-primary-500"
+                                        >
+                                            {cell[1]}
+                                        </a>
+                                    ) : (
+                                        cell[1]
+                                    )}
+                                </TableCell>
+                            ))}
                         {children && (
                             <TableCell>
                                 <DropdownMenu>
