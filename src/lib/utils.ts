@@ -19,3 +19,14 @@ export function getFormattedDate(date: Date) {
         addSuffix: true,
     });
 }
+
+export function getWordColor(word: string) {
+    const greenWords = ["active", "published", "completed", "normal"];
+    const redWords = ["blocked", "reported"];
+    const orangeWords = ["pending"];
+
+    const lowerCaseWord = word.toLowerCase();
+    if (greenWords.includes(lowerCaseWord)) return "text-primary-main";
+    if (redWords.includes(lowerCaseWord)) return "text-error-800";
+    if (orangeWords.includes(lowerCaseWord)) return "text-orange-100";
+}
