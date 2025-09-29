@@ -21,7 +21,7 @@ export function getFormattedDate(date: Date) {
 }
 
 export function getWordColor(word: string) {
-    const greenWords = ["active", "published", "completed", "normal"];
+    const greenWords = ["active", "published", "completed", "normal", "credit"];
     const redWords = ["blocked", "reported"];
     const orangeWords = ["pending"];
 
