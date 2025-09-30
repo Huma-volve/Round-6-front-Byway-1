@@ -68,15 +68,15 @@ function CourseManagement() {
   };
 
   return (
-    <div className="bg-[#eeeeeee8]">
+    <div>
       <OutletLayout
         title="Courses Management"
-        children=""
         subTitle="View, filter, and manage all published and pending courses on the platform."
-      />
-      <DataTable<ICourses> data={data}>
-        <CustomActions />
-      </DataTable>
+      >
+        <DataTable<ICourses> data={data}>
+          <CustomActions />
+        </DataTable>
+      </OutletLayout>
     </div>
   );
 }

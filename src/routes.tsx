@@ -13,6 +13,7 @@ import {
   DashboardError,
   ProtectedAdminRoute,
 } from "./dashboard/pages";
+import CourseDetails from "./dashboard/pages/courseManagement/CourseDetails";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
       {
         path: "/reports",
         element: <Reports />,
+      },
+      {
+        path: "/course-management-details/:id",
+        element: <CourseDetails />,
       },
     ],
   },
