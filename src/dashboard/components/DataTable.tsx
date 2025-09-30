@@ -4,7 +4,7 @@ import {
   isValidElement,
   type ReactElement,
 } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   Table,
@@ -37,6 +37,11 @@ function DataTable<T extends { id: number }>({
   const [tableData, setTableData] = useState<T[]>(data);
   const [editingId, setEditingId] = useState<number | null>(null);
   const [editRow, setEditRow] = useState<Partial<T>>({});
+
+  // ✅ تحديث البيانات عند تغيّر props.data
+  useEffect(() => {
+    setTableData(data);
+  }, [data]);
 
   if (!tableData.length) return <NoData />;
 
@@ -104,23 +109,21 @@ function DataTable<T extends { id: number }>({
                     Save
                   </button>
                 ) : (
-                  <>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger className="flex items-center gap-1 bg-[rgba(88,125,189,0.44)] rounded-sm py-.5 px-2 cursor-pointer mx-auto">
-                        Actions <Eye size={16} />
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="flex flex-col gap-2 font-semibold">
-                        {Children.map(children, (child) =>
-                          isValidElement(child)
-                            ? cloneElement(child, {
-                                rowId: row.id,
-                                onEdit: () => handleEdit(row),
-                              })
-                            : child
-                        )}
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger className="flex items-center gap-1 bg-[rgba(88,125,189,0.44)] rounded-sm py-.5 px-2 cursor-pointer mx-auto">
+                      Actions <Eye size={16} />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="flex flex-col gap-2 font-semibold">
+                      {Children.map(children, (child) =>
+                        isValidElement(child)
+                          ? cloneElement(child, {
+                              rowId: row.id,
+                              onEdit: () => handleEdit(row),
+                            })
+                          : child
+                      )}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 )}
               </TableCell>
             )}
