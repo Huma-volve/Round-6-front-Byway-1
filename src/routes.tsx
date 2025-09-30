@@ -14,6 +14,7 @@ import {
   ProtectedAdminRoute,
 } from "./dashboard/pages";
 import CourseDetails from "./dashboard/pages/courseManagement/CourseDetails";
+import UserProfile from "./dashboard/pages/userManagement/UserProfile";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -71,6 +72,10 @@ export const router = createBrowserRouter([
       {
         path: "/course-management-details/:id",
         element: <CourseDetails />,
+      },
+      {
+        path: "/user-profile/:id",
+        element: <UserProfile />,
       },
     ],
   },
