@@ -8,4 +8,3 @@ export { default as PaymentsRevenue } from "./paymentsRevenue/PaymentsRevenue";
 export { default as Reviews } from "./reviews/Reviews";
 export { default as PlatformSettings } from "./platformSettings/PlatformSettings";
 export { default as Reports } from "./reports/Reports";
-export { default as FullReview } from "./FullReview/FullReview";
