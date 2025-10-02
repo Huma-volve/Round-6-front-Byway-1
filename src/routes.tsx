@@ -1,26 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import {
-  CloseAccount,
-  Error,
-  Home,
-  NotFound,
-  Notifications,
-  ProtectedRoute,
-  Settings,
-  PaymentMethods,
-  Payment,
-  PaymentHistory,
-} from "./pages";
-import AddCourse from "./pages/Instractor/addCourse/AddCourse";
-import CourseDetails from "./pages/Instractor/CourseDetails/CourseDetails";
-import Reviews from "./pages/Instractor/MyReviews/Reviews";
-import InstructorNotifications from "./pages/Instractor/Notifications/InstructorNotifications";
-import Payout from "./pages/Instractor/Revenue/pages/Payout";
-import WithdrawAmount from "./pages/Instractor/Revenue/pages/WithdrawAmount";
-import Revenue from "./pages/Instractor/Revenue/pages/Revenue";
-import ReviewDetails from "./pages/Instractor/mydashboardpages/ReviewDetails";
-import PlatFormSetting from "./pages/Instractor/mydashboardpages/PlatFormSetting";
+import { Error, Home, NotFound, ProtectedRoute } from "./pages";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -77,30 +57,7 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/notifications",
-        element: <Notifications />,
-      },
-      {
-        path: "/close-account",
-        element: <CloseAccount />,
-      },
-      {
-        path: "/settings",
-        element: <Settings />,
-      },
-      {
-        path: "/payment",
-        element: <Payment />,
-      },
-      {
-        path: "/payment-methods",
-        element: <PaymentMethods />,
-      },
-      {
-        path: "/payment-history",
-        element: <PaymentHistory />,
-      },
     ],
   },
+ 
 ]);

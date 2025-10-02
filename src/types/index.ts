@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface INotification {
   id: string;
   type: string;
@@ -46,3 +47,14 @@ export interface ISocial {
   link: string;
 }
 
+=======
+export type Course = {
+    id: string;
+    title: string;
+    instructor: string;
+    ratings: number;
+    category: string;
+    date: string;
+    video?: string;
+};
+>>>>>>> 80af8b5c068493414dc6d6741bdb38bb7c69de8c
