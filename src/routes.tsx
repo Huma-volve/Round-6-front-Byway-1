@@ -15,6 +15,7 @@ import {
 } from "./dashboard/pages";
 import CourseDetails from "./dashboard/pages/courseManagement/CourseDetails";
 import UserProfile from "./dashboard/pages/userManagement/UserProfile";
+import ReviewDetails from "./dashboard/pages/reviews/ReviewDetails";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -64,6 +65,10 @@ export const router = createBrowserRouter([
       {
         path: "/reviews",
         element: <Reviews />,
+      },
+      {
+        path:"/reviewDetails",
+        element:<ReviewDetails/>
       },
       {
         path: "/reports",
