@@ -19,6 +19,12 @@ type ProtectedRouteProps = {
 };
 
 function ProtectedRoute({ children }: ProtectedRouteProps) {
+<<<<<<< HEAD
+  const token = localStorage.getItem("token");
+
+  // return !token ? <Navigate to="/get-start" replace /> : children;
+  return children;
+=======
 
   // const token = localStorage.getItem("token");
 
@@ -27,6 +33,7 @@ function ProtectedRoute({ children }: ProtectedRouteProps) {
   // مش هنعمل أي تحقق هنا
   return children;
 
+>>>>>>> 80af8b5c068493414dc6d6741bdb38bb7c69de8c
 }
 
 export default ProtectedRoute;
