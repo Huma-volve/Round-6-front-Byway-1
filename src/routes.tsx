@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import { Error, Home, NotFound, ProtectedRoute } from "./pages";
+import { Profile, Courses, Error, Home, NotFound, ProtectedRoute } from "./pages";
 import AddCourse from "./pages/Instractor/addCourse/AddCourse";
 import CourseDetails from "./pages/Instractor/CourseDetails/CourseDetails";
 import Login from "./pages/Instractor/auth/Login";
