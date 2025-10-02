@@ -26,7 +26,7 @@ export default function AvatarIcon() {
       >
         <div className="py-1">
           <Link
-            to="#"
+            to="profile"
             className="font-normal text-[#334155] block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
           >
             Profile
@@ -34,7 +34,7 @@ export default function AvatarIcon() {
         </div>
         <div className="py-1">
           <Link
-            to="#"
+            to="courses"
             className="font-normal text-[#334155] block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
           >
             My Courses
@@ -42,7 +42,7 @@ export default function AvatarIcon() {
         </div>
         <div className="py-1">
           <Link
-            to="#"
+            to="revenue"
             className="font-normal text-[#334155] block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
           >
             Revenue
@@ -50,7 +50,7 @@ export default function AvatarIcon() {
         </div>
         <div className="py-1">
           <Link
-            to="#"
+            to="reviews"
             className="font-normal text-[#334155] block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
           >
             My Reviews

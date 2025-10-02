@@ -20,7 +20,7 @@ function NavLinks({ isLoggedIn, cart }: NavLinksProps) {
 
     return (
         <nav className="hidden lg:flex items-center gap-3">
-            <AppButton as={Link} to="/" variant="ghost">
+            <AppButton as={Link} to="/instructor" variant="ghost">
                 Join us as an instructor
             </AppButton>
 

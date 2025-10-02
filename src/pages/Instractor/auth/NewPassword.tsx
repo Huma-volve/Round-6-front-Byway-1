@@ -46,7 +46,7 @@ export default function NewPassword() {
 
   function handleNewPassword(values: any) {
     console.log(values);
-    navg("/login");
+    navg("/instructor/login");
   }
   return (
     <>

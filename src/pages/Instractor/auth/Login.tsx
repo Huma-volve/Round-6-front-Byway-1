@@ -11,11 +11,12 @@ import { useForm } from "react-hook-form";
 import FaceBookIcon from "@/assets/images/facebook.png";
 import MicroSoftIcon from "@/assets/images/microsoft.png";
 import GoogleIcon from "@/assets/images/search.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function Login() {
+  const navg = useNavigate()
   const LoginSchema = z.object({
     email: z
       .email("Email is Required")
@@ -40,6 +41,8 @@ export default function Login() {
 
   function handleLogin(values: any) {
     console.log(values);
+    navg('/instructor')
+
   }
   return (
     <>
@@ -102,7 +105,7 @@ export default function Login() {
                   </Button>
 
                   <Link
-                    to="/forgetPassword"
+                    to="/instructor/forgetPassword"
                     className="text-[12px] font-normal text-[#727272] hover:underline"
                   >
                     Forgot Password?

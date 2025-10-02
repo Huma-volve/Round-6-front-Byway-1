@@ -69,7 +69,7 @@ export default function Register() {
   const router = useNavigate()
   function handleRegister(values: any) {
     console.log(values);
-      router('/login')
+      router('/instructor/login')
   }
   return (
     <>

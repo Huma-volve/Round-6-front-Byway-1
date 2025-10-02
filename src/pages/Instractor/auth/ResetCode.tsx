@@ -33,7 +33,7 @@ export default function ResetCode() {
 
   function handleResetCode(values: any) {
     console.log(values);
-    navg('/newpassword')
+    navg('/instructor/newpassword')
   }
   return (
     <>

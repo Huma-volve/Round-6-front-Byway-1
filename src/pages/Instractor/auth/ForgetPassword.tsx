@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -29,7 +29,7 @@ export default function ForgetPassword() {
    const navg = useNavigate();
   function handleLogin(values: any) {
     console.log(values);
-    navg('/resetcode')
+    navg('/instructor/resetcode')
   }
   return (
     <>

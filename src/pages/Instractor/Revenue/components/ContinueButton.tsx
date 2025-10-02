@@ -5,7 +5,7 @@ function ContinueButton() {
   return (
     <div>
       <button
-        onClick={() => navigate("/withdraw")}
+        onClick={() => navigate("/instructor/payout/withdraw")}
         className="bg-[#5BAE61] w-full rounded-[8px] font-sans font-semibold text-[18px] cursor-pointer hover:bg-[#035c09] text-white py-1.5 px-6 "
       >
         Continue
