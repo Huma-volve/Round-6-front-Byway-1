@@ -1,7 +1,7 @@
 function InstructorNotifications() {
   return (
     <div className="flex justify-center py-8 ">
-      <div className="flex flex-col gap-3 w-[50%] ">
+      <div className="flex flex-col gap-3 p-2 md:p-0 lg:w-[50%] ">
         {/* Card */}
         <div className="border-[1px] h-[100px] rounded-[8px] p-3.5 border-[#7272722E] ">
           <div className="flex justify-between items-center">

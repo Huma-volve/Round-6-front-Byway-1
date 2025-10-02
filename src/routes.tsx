@@ -16,7 +16,11 @@ import AddCourse from "./pages/Instractor/addCourse/AddCourse";
 import CourseDetails from "./pages/Instractor/CourseDetails/CourseDetails";
 import Reviews from "./pages/Instractor/MyReviews/Reviews";
 import InstructorNotifications from "./pages/Instractor/Notifications/InstructorNotifications";
-import Revenue from "./pages/Instractor/Revenue/Revenue";
+import Payout from "./pages/Instractor/Revenue/pages/Payout";
+import WithdrawAmount from "./pages/Instractor/Revenue/pages/WithdrawAmount";
+import Revenue from "./pages/Instractor/Revenue/pages/Revenue";
+import ReviewDetails from "./pages/Instractor/mydashboardpages/ReviewDetails";
+import PlatFormSetting from "./pages/Instractor/mydashboardpages/PlatFormSetting";
 
 export const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
@@ -47,6 +51,19 @@ export const router = createBrowserRouter([
   {
     path: "/revenue",
     element: <Revenue />,
+  },
+  { path: "reviewdetails", element: <ReviewDetails /> },
+  {
+    path:'/platform-seetings',
+    element:<PlatFormSetting/>
+  },
+  {
+    path: "/payout",
+    element: <Payout />,
+  },
+  {
+    path: "/withdraw",
+    element: <WithdrawAmount />,
   },
   {
     element: (

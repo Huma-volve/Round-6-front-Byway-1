@@ -5,7 +5,7 @@ function Reviews() {
   const pages = [1, 2, 3];
   return (
     <div className="flex justify-center text-[#0F172A]">
-      <div className="flex flex-col gap-4  py-8 w-[60%]  ">
+      <div className="flex flex-col gap-4 py-6 px-2 md:px-0 md:py-8 md:w-[60%]  ">
         <h1 className=" font-[inter] text-xl font-semibold">Reviews (12)</h1>
         <div className="flex flex-col gap-3 ">
           {/* Card */}
