@@ -11,9 +11,10 @@ const loaderVariants = cva("animate-spin", {
       lg: "h-8 w-8",
       xl: "h-12 w-12",
       xxl: "h-20 w-20",
+      xxxl: "h-24 w-24",
     },
     variant: {
-      default: "text-primary",
+      default: "text-primary-main",
       white: "text-white",
       secondary: "text-secondary",
       destructive: "text-destructive",
